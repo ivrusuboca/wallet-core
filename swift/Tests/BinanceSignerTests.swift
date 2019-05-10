@@ -16,6 +16,7 @@ class BinanceSignerTests: XCTestCase {
         signingInput.chainID = "Binance-Chain-Nile"
         signingInput.accountNumber = 0
         signingInput.sequence = 0
+        signingInput.testNet = false // TODO: fix prod vs testnet
 
         signingInput.privateKey = privateKey.data
 

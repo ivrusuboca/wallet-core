@@ -125,7 +125,7 @@ public extension CoinType {
         case .bitcoinCash:
             return .bitcoinCash
         case .binance:
-            return .binance
+            return .binanceTest // TODO: fix prod vs testnet
         case .cosmos:
             return .cosmos
         case .litecoin:

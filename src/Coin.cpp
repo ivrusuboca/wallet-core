@@ -50,7 +50,8 @@ bool TW::validateAddress(TWCoinType coin, const std::string& string) {
         return Aion::Address::isValid(string);
 
     case TWCoinTypeBinance:
-        return Cosmos::Address::isValid(string, HRP_BINANCE);
+        return Cosmos::Address::isValid(string, HRP_BINANCE) ||
+               Cosmos::Address::isValid(string, HRP_BINANCE_TEST);
 
     case TWCoinTypeBitcoin:
         return Bitcoin::SegwitAddress::isValid(string, HRP_BITCOIN) ||
@@ -174,7 +175,7 @@ std::string TW::deriveAddress(TWCoinType coin, const PrivateKey& privateKey) {
 std::string TW::deriveAddress(TWCoinType coin, const PublicKey& publicKey) {
     switch (coin) {
     case TWCoinTypeBinance:
-        return Cosmos::Address(HRP_BINANCE, publicKey).string();
+        return Cosmos::Address(HRP_BINANCE_TEST, publicKey).string(); // TODO: fix prod vs testnet
 
     case TWCoinTypeCosmos:
         return Cosmos::Address(HRP_COSMOS, publicKey).string();

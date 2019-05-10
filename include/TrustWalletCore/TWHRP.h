@@ -20,12 +20,14 @@ enum TWHRP {
     TWHRPViacoin     /* "via" */,
     TWHRPBitcoinCash /* "bitcoincash" */,
     TWHRPBinance     /* "bnb" */,
+    TWHRPBinanceTest /* "tbnb" */,
     TWHRPCosmos      /* "cosmos" */,
     TWHRPGroestlcoin /* "grs" */,
     TWHRPQtum        /* "qtum" */,
 };
 
 static const char *_Nonnull HRP_BINANCE = "bnb";
+static const char *_Nonnull HRP_BINANCE_TEST = "tbnb";
 static const char *_Nonnull HRP_BITCOIN = "bc";
 static const char *_Nonnull HRP_BITCOINCASH = "bitcoincash";
 static const char *_Nonnull HRP_LITECOIN = "ltc";
